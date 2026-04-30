@@ -21,7 +21,6 @@ export class Settings {
   constructor(private cdr: ChangeDetectorRef) {}
 
   saveSettings() {
-    console.log('تم حفظ البيانات بنجاح يا هندسة!', this.userProfile);
     alert('Settings updated successfully!');
     
     this.cdr.detectChanges();

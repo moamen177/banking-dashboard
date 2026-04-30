@@ -5,7 +5,7 @@
   </div>
 
   <div class="overflow-x-auto">
-    <table class="w-full text-left">
+    <table class="w-full text-left min-w-[600px]">
       <thead class="bg-gray-50 text-gray-400 text-xs uppercase font-semibold">
         <tr>
           <th class="px-6 py-4">Transaction</th>
@@ -17,26 +17,6 @@
       <tbody class="divide-y divide-gray-50">
         @for (item of recentTransactions; track item.id) {
           <tr class="hover:bg-gray-50/50 transition-colors">
-            <td class="px-6 py-4">
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                  <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-                  </svg>
-                </div>
-                <span class="text-sm font-bold text-gray-900">{{ item.name }}</span>
-              </div>
-            </td>
-            <td class="px-6 py-4 text-sm text-gray-500">{{ item.date }}</td>
-            <td class="px-6 py-4 font-bold text-sm text-gray-900">${{ item.amount }}</td>
-            <td class="px-6 py-4">
-              <span [ngClass]="{
-                'bg-green-50 text-green-600': item.status === 'Completed',
-                'bg-yellow-50 text-yellow-600': item.status === 'Pending'
-              }" class="px-3 py-1 rounded-full text-[10px] font-bold uppercase">
-                {{ item.status }}
-              </span>
-            </td>
           </tr>
         }
       </tbody>

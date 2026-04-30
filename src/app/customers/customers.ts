@@ -25,7 +25,6 @@ export class Customers implements OnInit {
         
         this.cdr.detectChanges();
       },
-      error: (err) => console.error('فيه مشكلة في الـ API يا هندسة', err)
     });
   }
 

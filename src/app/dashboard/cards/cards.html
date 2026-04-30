@@ -1,9 +1,9 @@
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 w-full">
   @for (item of stats; track item.title) {
-    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-      <p class="text-gray-500 text-sm mb-1 font-medium">{{ item.title }}</p>
+    <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+      <p class="text-gray-500 text-xs md:text-sm mb-1 font-medium">{{ item.title }}</p>
       
-      <h3 class="text-2xl font-bold mt-1" 
+      <h3 class="text-xl md:text-2xl font-bold mt-1" 
           [ngClass]="{
             'text-blue-600': item.title === 'Balance',
             'text-green-600': item.title === 'Income',
